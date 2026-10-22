@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kwaku Ebenezer — mobile phones, data bundles, graphics and digital services in Ghana. Contact us on WhatsApp for enquiries and orders.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Kwaku Ebenezer | Digital & Business Services</title>
+  <style>
+    :root{--bg:#0b1220;--panel:#121d31;--text:#f6f8fc;--muted:#b9c5d8;--gold:#f4c45e;--line:rgba(255,255,255,.12);--green:#20c875}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1100px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,18,32,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 0}
+    .brand{font-weight:850;letter-spacing:.2px}.brand span{color:var(--gold)}
+    .navlinks{display:flex;gap:22px;align-items:center;font-size:.94rem;color:var(--muted)}
+    .navlinks a:hover{color:var(--gold)}
+    .menu{display:none}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--gold);color:#171717;padding:12px 18px;border-radius:10px;font-weight:800;border:0;cursor:pointer}
+    .btn.secondary{background:transparent;border:1px solid var(--line);color:var(--text)}
+    .hero{padding:82px 0 68px;background:radial-gradient(ellipse at 80% 15%,rgba(244,196,94,.15),transparent 36%),linear-gradient(145deg,#0b1220,#101d32)}
+    .hero-grid{display:grid;grid-template-columns:1.35fr .8fr;gap:44px;align-items:center}
+    .eyebrow{color:var(--gold);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:850}
+    h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.04;letter-spacing:-2px;margin:16px 0}
+    h1 em{color:var(--gold);font-style:normal}
+    .lead{font-size:1.13rem;color:var(--muted);max-width:640px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .hero-card{border:1px solid var(--line);border-radius:24px;background:linear-gradient(155deg,rgba(255,255,255,.08),rgba(255,255,255,.025));padding:28px;box-shadow:0 20px 70px rgba(0,0,0,.22)}
+    .monogram{height:76px;width:76px;border-radius:22px;background:var(--gold);color:#121212;display:grid;place-items:center;font-size:2rem;font-weight:950;margin-bottom:22px}
+    .hero-card h2{margin:0 0 8px;font-size:1.45rem}.hero-card p{color:var(--muted);margin:0}
+    .quickfacts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}
+    .fact{border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:.9rem}.fact strong{display:block;color:var(--text);font-size:1.1rem}
+    section{padding:72px 0}
+    .section-head{max-width:690px;margin-bottom:30px}
+    h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.15;margin:8px 0 12px;letter-spacing:-.8px}
+    .section-head p{color:var(--muted);margin:0}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;min-height:215px}
+    .service .icon{font-size:1.8rem;margin-bottom:14px}
+    .service h3{margin:0 0 8px;font-size:1.13rem}
+    .service p{color:var(--muted);margin:0 0 16px;font-size:.95rem}
+    .small-link{color:var(--gold);font-weight:800;font-size:.92rem}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+    .about-panel{padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--panel)}
+    .check{display:flex;gap:10px;margin:13px 0;color:var(--muted)}.check b{color:var(--green)}
+    .contact{background:linear-gradient(145deg,#111c30,#0d1525);border-top:1px solid var(--line)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+    .contact-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}
+    .contact-row{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
+    .contact-row:last-child{border:0}
+    .contact-row span{color:var(--muted);display:block;font-size:.9rem}
+    .contact-row strong{overflow-wrap:anywhere}
+    footer{padding:24px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    @media(max-width:760px){
+      .hero{padding:58px 0 48px}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .services{grid-template-columns:1fr 1fr}.navlinks{display:none}.menu{display:inline-flex}
+      .quickfacts{grid-template-columns:1fr 1fr}h1{letter-spacing:-1.2px}
+    }
+    @media(max-width:480px){.services{grid-template-columns:1fr}.hero-card{padding:22px}.quickfacts{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#home">KWAKU <span>EBENEZER</span></a>
+      <div class="navlinks">
+        <a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </div>
+      <a class="btn" href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Reliable • Friendly • Customer-focused</div>
+        <h1>Smart services.<br><em>Simple solutions.</em></h1>
+        <p class="lead">Welcome to Kwaku Ebenezer. Explore mobile phones, data bundles, graphics and other convenient digital services. Get in touch to ask a question or place an order.</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+          <a class="btn secondary" href="#services">Explore services</a>
+        </div>
+        <div class="quickfacts">
+          <div class="fact"><strong>Mobile</strong>Phones & bundles</div>
+          <div class="fact"><strong>Creative</strong>Graphics & media</div>
+          <div class="fact"><strong>Direct</strong>Personal support</div>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <div class="monogram">KE</div>
+        <h2>Your trusted service contact</h2>
+        <p>Need a phone, data bundle, design or digital service? Send a message and tell us what you need.</p>
+        <div style="margin-top:22px"><a class="small-link" href="#contact">Contact details &rarr;</a></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">What I offer</div>
+        <h2>Services to help you get things done</h2>
+        <p>Choose a service below and contact me for current availability, prices and ordering details.</p>
+      </div>
+      <div class="services">
+        <article class="service"><div class="icon">📱</div><h3>Mobile Phones</h3><p>Enquire about selected smartphone models and available installment options.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%2C%20I%20want%20to%20enquire%20about%20mobile%20phones." target="_blank" rel="noopener">Ask about phones ↗</a></article>
+        <article class="service"><div class="icon">📶</div><h3>Data Bundles</h3><p>Ask about available data bundle packages and the latest prices before ordering.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%2C%20I%20want%20to%20buy%20a%20data%20bundle." target="_blank" rel="noopener">Order a bundle ↗</a></article>
+        <article class="service"><div class="icon">🎨</div><h3>Graphics & Multimedia</h3><p>Enquire about flyers, logos, promotional designs and other creative work.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%2C%20I%20need%20a%20graphics%20or%20multimedia%20design." target="_blank" rel="noopener">Request a design ↗</a></article>
+        <article class="service"><div class="icon">🧾</div><h3>Digital & Utility Services</h3><p>Ask about supported services such as ECG bill payments and AFA registration.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%2C%20I%20want%20to%20enquire%20about%20digital%20services." target="_blank" rel="noopener">Make an enquiry ↗</a></article>
+        <article class="service"><div class="icon">💳</div><h3>MoMo Assistance</h3><p>Get guidance on supported mobile money account issues. Never share your PIN or OTP.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%2C%20I%20need%20help%20with%20a%20mobile%20money%20account%20issue." target="_blank" rel="noopener">Ask for assistance ↗</a></article>
+        <article class="service"><div class="icon">🤝</div><h3>General Enquiries</h3><p>Not sure which service you need? Send a message and explain what you are looking for.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20have%20a%20general%20enquiry." target="_blank" rel="noopener">Contact me ↗</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="eyebrow">About Kwaku Ebenezer</div>
+        <h2>Clear communication. Helpful service.</h2>
+        <p class="lead">My aim is to make it easy for customers to find the service they need and contact me directly. I welcome enquiries about availability, pricing and how to place an order.</p>
+      </div>
+      <div class="about-panel">
+        <h3 style="margin-top:0">What you can expect</h3>
+        <div class="check"><b>✓</b><span>Direct contact for questions and orders</span></div>
+        <div class="check"><b>✓</b><span>Clear confirmation of prices before you pay</span></div>
+        <div class="check"><b>✓</b><span>Service details explained before proceeding</span></div>
+        <div class="check"><b>✓</b><span>Respectful, customer-focused communication</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="eyebrow">Let's talk</div>
+        <h2>How can I help you today?</h2>
+        <p class="lead">For current prices, availability and orders, the quickest way to reach me is WhatsApp or phone.</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20am%20contacting%20you%20through%20your%20website." target="_blank" rel="noopener">Message on WhatsApp ↗</a>
+          <a class="btn secondary" href="tel:+233550729439">Call now</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-row"><div>📞</div><div><span>Phone / WhatsApp</span><strong>055 072 9439</strong></div></div>
+        <div class="contact-row"><div>📍</div><div><span>Service area</span><strong>Ghana</strong></div></div>
+        <div class="contact-row"><div>🎵</div><div><span>TikTok</span><strong><a href="https://www.tiktok.com/@_maths__ai" target="_blank" rel="noopener">@_maths__ai ↗</a></strong></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Kwaku Ebenezer. All rights reserved.</span>
+    <span>Built to help customers connect with you.</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
