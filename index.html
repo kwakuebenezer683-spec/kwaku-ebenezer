@@ -3,170 +3,241 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kwaku Ebenezer — mobile phones, data bundles, graphics and digital services in Ghana. Contact us on WhatsApp for enquiries and orders.">
+  <meta name="description" content="Kwaku Ebenezer mobile app-style landing page for data bundles, phones, graphics and digital services in Ghana.">
   <meta name="theme-color" content="#0b1220">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
-  <title>Kwaku Ebenezer | Digital & Business Services</title>
+  <title>Kwaku Ebenezer | App Store Landing Page</title>
   <style>
-    :root{--bg:#0b1220;--panel:#121d31;--text:#f6f8fc;--muted:#b9c5d8;--gold:#f4c45e;--line:rgba(255,255,255,.12);--green:#20c875}
+    :root{
+      --bg:#07111d; --bg-2:#111d30; --panel:#101b2d; --panel-2:#16263e; --text:#eef4ff; --muted:#b2c3d9;
+      --gold:#f4c45e; --gold-2:#d7a635; --line:rgba(255,255,255,.12); --green:#22c55e; --shadow:0 28px 70px rgba(0,0,0,.32);
+    }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at top, rgba(244,196,94,.14), transparent 23%), linear-gradient(180deg,#07111d 0%,#0d1729 100%);color:var(--text);line-height:1.6}
     a{color:inherit;text-decoration:none}
-    .wrap{width:min(1100px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:10;background:rgba(11,18,32,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 0}
-    .brand{font-weight:850;letter-spacing:.2px}.brand span{color:var(--gold)}
-    .navlinks{display:flex;gap:22px;align-items:center;font-size:.94rem;color:var(--muted)}
-    .navlinks a:hover{color:var(--gold)}
-    .menu{display:none}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--gold);color:#171717;padding:12px 18px;border-radius:10px;font-weight:800;border:0;cursor:pointer}
-    .btn.secondary{background:transparent;border:1px solid var(--line);color:var(--text)}
-    .hero{padding:82px 0 68px;background:radial-gradient(ellipse at 80% 15%,rgba(244,196,94,.15),transparent 36%),linear-gradient(145deg,#0b1220,#101d32)}
-    .hero-grid{display:grid;grid-template-columns:1.35fr .8fr;gap:44px;align-items:center}
-    .eyebrow{color:var(--gold);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:850}
-    h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.04;letter-spacing:-2px;margin:16px 0}
-    h1 em{color:var(--gold);font-style:normal}
-    .lead{font-size:1.13rem;color:var(--muted);max-width:640px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-    .hero-card{border:1px solid var(--line);border-radius:24px;background:linear-gradient(155deg,rgba(255,255,255,.08),rgba(255,255,255,.025));padding:28px;box-shadow:0 20px 70px rgba(0,0,0,.22)}
-    .monogram{height:76px;width:76px;border-radius:22px;background:var(--gold);color:#121212;display:grid;place-items:center;font-size:2rem;font-weight:950;margin-bottom:22px}
-    .hero-card h2{margin:0 0 8px;font-size:1.45rem}.hero-card p{color:var(--muted);margin:0}
-    .quickfacts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}
-    .fact{border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:.9rem}.fact strong{display:block;color:var(--text);font-size:1.1rem}
-    section{padding:72px 0}
-    .section-head{max-width:690px;margin-bottom:30px}
-    h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.15;margin:8px 0 12px;letter-spacing:-.8px}
-    .section-head p{color:var(--muted);margin:0}
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .service{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;min-height:215px}
-    .service .icon{font-size:1.8rem;margin-bottom:14px}
-    .service h3{margin:0 0 8px;font-size:1.13rem}
-    .service p{color:var(--muted);margin:0 0 16px;font-size:.95rem}
-    .small-link{color:var(--gold);font-weight:800;font-size:.92rem}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
-    .about-panel{padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--panel)}
-    .check{display:flex;gap:10px;margin:13px 0;color:var(--muted)}.check b{color:var(--green)}
-    .contact{background:linear-gradient(145deg,#111c30,#0d1525);border-top:1px solid var(--line)}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
-    .contact-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}
-    .contact-row{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
-    .contact-row:last-child{border:0}
-    .contact-row span{color:var(--muted);display:block;font-size:.9rem}
-    .contact-row strong{overflow-wrap:anywhere}
-    footer{padding:24px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
-    .footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-    @media(max-width:760px){
-      .hero{padding:58px 0 48px}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
-      .services{grid-template-columns:1fr 1fr}.navlinks{display:none}.menu{display:inline-flex}
-      .quickfacts{grid-template-columns:1fr 1fr}h1{letter-spacing:-1.2px}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1180px,92%);margin:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(7,17,29,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:14px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.08em}
+    .brand-badge{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#111;display:grid;place-items:center;font-size:.9rem;font-weight:900}
+    .brand strong{font-size:.95rem}.brand span{color:var(--gold)}
+    .nav{display:flex;align-items:center;gap:20px;color:var(--muted);font-size:.95rem}
+    .nav a:hover{color:var(--text)}
+    .nav .primary{background:var(--gold);color:#111;border-radius:10px;padding:10px 14px;font-weight:800}
+    .hero{padding:52px 0 36px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(244,196,94,.08);border:1px solid rgba(244,196,94,.22);color:var(--gold);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
+    h1{margin:20px 0 16px;font-size:clamp(2.6rem,5vw,5.2rem);line-height:1.02;letter-spacing:-.06em}
+    h1 .highlight{color:var(--gold)}
+    .lead{max-width:620px;color:var(--muted);font-size:1.08rem}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 18px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:14px 18px;font-weight:800;border:1px solid transparent;transition:.2s ease}
+    .btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#111}
+    .btn.secondary{background:transparent;border-color:var(--line);color:var(--text)}
+    .btn:hover{transform:translateY(-1px)}
+    .meta-row{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:.92rem}
+    .meta{display:flex;align-items:center;gap:8px}
+    .meta .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px rgba(34,197,94,.8)}
+    .phone-shell{position:relative;padding:16px;border-radius:32px;background:linear-gradient(180deg,#0e1a2c,#111c2e);border:1px solid var(--line);box-shadow:var(--shadow);max-width:420px;margin:0 auto}
+    .phone-shell::before{content:"";position:absolute;inset:12px auto auto 50%;transform:translateX(-50%);width:140px;height:8px;border-radius:999px;background:rgba(255,255,255,.08)}
+    .phone-screen{background:linear-gradient(180deg,#101b2d,#0b1220);border-radius:24px;padding:26px 18px 18px;border:1px solid var(--line);min-height:540px}
+    .app-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .app-brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .tiny{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--gold-2));display:grid;place-items:center;color:#111;font-weight:900;letter-spacing:-.04em}
+    .status-pill{padding:6px 10px;border-radius:999px;background:rgba(34,197,94,.12);color:#86efac;border:1px solid rgba(34,197,94,.22);font-size:.72rem;font-weight:700}
+    .screen-card{padding:18px 16px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line)}
+    .rating{display:flex;align-items:center;gap:8px;color:var(--gold);font-weight:800;margin-bottom:10px}
+    .rating span{color:var(--text);font-weight:700}
+    .screen-card h2{margin:0 0 8px;font-size:1.55rem;letter-spacing:-.05em}
+    .screen-card p{margin:0;color:var(--muted)}
+    .mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+    .mini-stat{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:12px 10px}
+    .mini-stat strong{display:block;font-size:1.2rem}
+    .mini-stat span{font-size:.72rem;color:var(--muted)}
+    .cta-stack{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+    .small-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 14px;border-radius:12px;font-weight:800;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .small-btn.primary{background:var(--gold);color:#111;border-color:transparent}
+    .store-section{padding:28px 0 10px}
+    .section-head{margin-bottom:24px}
+    .section-head h3{margin:0 0 8px;font-size:clamp(2rem,3vw,2.7rem);letter-spacing:-.06em}
+    .section-head p{margin:0;color:var(--muted)}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{padding:22px 18px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.02)}
+    .feature .icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem;background:rgba(244,196,94,.12);border:1px solid rgba(244,196,94,.22);margin-bottom:16px}
+    .feature h4{margin:0 0 8px;font-size:1.15rem}
+    .feature p{margin:0;color:var(--muted)}
+    .showcase{padding:28px 0 10px}
+    .showcase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .showcase-card{padding:18px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,#101b2d,#0e1729)}
+    .showcase-card .preview{height:180px;border-radius:16px;background:linear-gradient(135deg,#f4c45e,#d9a33b);display:flex;align-items:end;padding:18px;color:#111;font-weight:900;letter-spacing:-.04em}
+    .showcase-card:nth-child(2) .preview{background:linear-gradient(135deg,#d8e6ff,#87aaff)}
+    .showcase-card:nth-child(3) .preview{background:linear-gradient(135deg,#d9ffef,#7ae5b1)}
+    .showcase-card h4{margin:16px 0 8px;font-size:1.1rem}
+    .showcase-card p{margin:0;color:var(--muted)}
+    .cta-panel{padding:26px 0 60px}
+    .cta-box{padding:28px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,rgba(244,196,94,.08),rgba(255,255,255,.02));display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .cta-box h3{margin:0 0 8px;font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.06em}
+    .cta-box p{margin:0;color:var(--muted)}
+    footer{padding:28px 0 44px;border-top:1px solid var(--line);color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media (max-width:900px){
+      .hero-grid,.feature-grid,.showcase-grid{grid-template-columns:1fr}
+      .cta-box{flex-direction:column;align-items:flex-start}
     }
-    @media(max-width:480px){.services{grid-template-columns:1fr}.hero-card{padding:22px}.quickfacts{grid-template-columns:1fr 1fr}}
+    @media (max-width:700px){
+      .nav{display:none}
+      .phone-shell{max-width:100%}
+      .mini-stats{grid-template-columns:1fr 1fr}
+    }
   </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <nav aria-label="Main navigation">
-      <a class="brand" href="#home">KWAKU <span>EBENEZER</span></a>
-      <div class="navlinks">
-        <a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
-      </div>
-      <a class="btn" href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp Us</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">Reliable • Friendly • Customer-focused</div>
-        <h1>Smart services.<br><em>Simple solutions.</em></h1>
-        <p class="lead">Welcome to Kwaku Ebenezer. Explore mobile phones, data bundles, graphics and other convenient digital services. Get in touch to ask a question or place an order.</p>
-        <div class="actions">
-          <a class="btn" href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
-          <a class="btn secondary" href="#services">Explore services</a>
-        </div>
-        <div class="quickfacts">
-          <div class="fact"><strong>Mobile</strong>Phones & bundles</div>
-          <div class="fact"><strong>Creative</strong>Graphics & media</div>
-          <div class="fact"><strong>Direct</strong>Personal support</div>
-        </div>
-      </div>
-      <aside class="hero-card">
-        <div class="monogram">KE</div>
-        <h2>Your trusted service contact</h2>
-        <p>Need a phone, data bundle, design or digital service? Send a message and tell us what you need.</p>
-        <div style="margin-top:22px"><a class="small-link" href="#contact">Contact details &rarr;</a></div>
-      </aside>
-    </div>
-  </section>
-
-  <section id="services">
+  <header class="topbar">
     <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">What I offer</div>
-        <h2>Services to help you get things done</h2>
-        <p>Choose a service below and contact me for current availability, prices and ordering details.</p>
-      </div>
-      <div class="services">
-        <article class="service"><div class="icon">📱</div><h3>Mobile Phones</h3><p>Enquire about selected smartphone models and available installment options.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%2C%20I%20want%20to%20enquire%20about%20mobile%20phones." target="_blank" rel="noopener">Ask about phones ↗</a></article>
-        <article class="service"><div class="icon">📶</div><h3>Data Bundles</h3><p>Ask about available data bundle packages and the latest prices before ordering.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%2C%20I%20want%20to%20buy%20a%20data%20bundle." target="_blank" rel="noopener">Order a bundle ↗</a></article>
-        <article class="service"><div class="icon">🎨</div><h3>Graphics & Multimedia</h3><p>Enquire about flyers, logos, promotional designs and other creative work.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%2C%20I%20need%20a%20graphics%20or%20multimedia%20design." target="_blank" rel="noopener">Request a design ↗</a></article>
-        <article class="service"><div class="icon">🧾</div><h3>Digital & Utility Services</h3><p>Ask about supported services such as ECG bill payments and AFA registration.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%2C%20I%20want%20to%20enquire%20about%20digital%20services." target="_blank" rel="noopener">Make an enquiry ↗</a></article>
-        <article class="service"><div class="icon">💳</div><h3>MoMo Assistance</h3><p>Get guidance on supported mobile money account issues. Never share your PIN or OTP.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%2C%20I%20need%20help%20with%20a%20mobile%20money%20account%20issue." target="_blank" rel="noopener">Ask for assistance ↗</a></article>
-        <article class="service"><div class="icon">🤝</div><h3>General Enquiries</h3><p>Not sure which service you need? Send a message and explain what you are looking for.</p><a class="small-link" href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20have%20a%20general%20enquiry." target="_blank" rel="noopener">Contact me ↗</a></article>
-      </div>
+      <nav aria-label="Main navigation">
+        <a href="#home" class="brand" aria-label="Kwaku Ebenezer home">
+          <span class="brand-badge">KE</span>
+          <strong>KWAKU <span>EBENEZER</span></strong>
+        </a>
+        <div class="nav">
+          <a href="#features">Features</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20want%20to%20make%20an%20enquiry." target="_blank" rel="noopener" class="primary">WhatsApp</a>
+        </div>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section id="about">
-    <div class="wrap about-grid">
-      <div>
-        <div class="eyebrow">About Kwaku Ebenezer</div>
-        <h2>Clear communication. Helpful service.</h2>
-        <p class="lead">My aim is to make it easy for customers to find the service they need and contact me directly. I welcome enquiries about availability, pricing and how to place an order.</p>
-      </div>
-      <div class="about-panel">
-        <h3 style="margin-top:0">What you can expect</h3>
-        <div class="check"><b>✓</b><span>Direct contact for questions and orders</span></div>
-        <div class="check"><b>✓</b><span>Clear confirmation of prices before you pay</span></div>
-        <div class="check"><b>✓</b><span>Service details explained before proceeding</span></div>
-        <div class="check"><b>✓</b><span>Respectful, customer-focused communication</span></div>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Trusted digital services</div>
+          <h1>Simple access to <span class="highlight">phones, data, graphics</span> and more.</h1>
+          <p class="lead">Kwaku Ebenezer helps customers quickly find genuine digital services, mobile phone support, bundle packages, and business support with a direct WhatsApp and phone contact.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="install.html">Install app</a>
+            <a class="btn secondary" href="download.html">Download</a>
+            <a class="btn secondary" href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp us</a>
+          </div>
+          <div class="meta-row">
+            <div class="meta"><span class="dot"></span> Active service</div>
+            <div class="meta"><span class="dot"></span> Ghana-based support</div>
+            <div class="meta"><span class="dot"></span> 4.9 rating</div>
+          </div>
+        </div>
 
-  <section class="contact" id="contact">
-    <div class="wrap contact-grid">
-      <div>
-        <div class="eyebrow">Let's talk</div>
-        <h2>How can I help you today?</h2>
-        <p class="lead">For current prices, availability and orders, the quickest way to reach me is WhatsApp or phone.</p>
-        <div class="actions">
-          <a class="btn" href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20am%20contacting%20you%20through%20your%20website." target="_blank" rel="noopener">Message on WhatsApp ↗</a>
-          <a class="btn secondary" href="tel:+233550729439">Call now</a>
+        <div class="phone-shell" aria-label="App preview">
+          <div class="phone-screen">
+            <div class="app-header">
+              <div class="app-brand"><span class="tiny">KE</span><span>Kwaku</span></div>
+              <span class="status-pill">Live</span>
+            </div>
+
+            <div class="screen-card">
+              <div class="rating">★★★★★ <span>4.9</span></div>
+              <h2>Everything you need in one place.</h2>
+              <p>Phones, bundles, graphics, digital assistance and direct communication.</p>
+            </div>
+
+            <div class="mini-stats">
+              <div class="mini-stat"><strong>24/7</strong><span>Support</span></div>
+              <div class="mini-stat"><strong>6+</strong><span>Services</span></div>
+              <div class="mini-stat"><strong>1</strong><span>Contact</span></div>
+            </div>
+
+            <div class="cta-stack">
+              <a class="small-btn primary" href="install.html">Get the app</a>
+              <a class="small-btn" href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20need%20an%20enquiry." target="_blank" rel="noopener">Chat now</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="contact-card">
-        <div class="contact-row"><div>📞</div><div><span>Phone / WhatsApp</span><strong>055 072 9439</strong></div></div>
-        <div class="contact-row"><div>📍</div><div><span>Service area</span><strong>Ghana</strong></div></div>
-        <div class="contact-row"><div>🎵</div><div><span>TikTok</span><strong><a href="https://www.tiktok.com/@_maths__ai" target="_blank" rel="noopener">@_maths__ai ↗</a></strong></div></div>
-      </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<footer>
-  <div class="wrap footer-inner">
-    <span>© <span id="year"></span> Kwaku Ebenezer. All rights reserved.</span>
-    <span>Built to help customers connect with you.</span>
-  </div>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <section class="store-section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <h3>Why customers choose Kwaku Ebenezer</h3>
+          <p>Simple communication, reliable service, and direct access to the help you need.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="icon">📱</div>
+            <h4>Smart device support</h4>
+            <p>Get help with phone enquiries and product availability with direct communication.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">📶</div>
+            <h4>Fast bundle access</h4>
+            <p>Ask about the latest bundle rates and plan the next purchase without confusion.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">🎨</div>
+            <h4>Creative solutions</h4>
+            <p>Request graphics, promotional design work, and digital support in one place.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <h3>Popular services</h3>
+          <p>Explore the most requested categories for direct action and order support.</p>
+        </div>
+
+        <div class="showcase-grid">
+          <article class="showcase-card">
+            <div class="preview">PHONE</div>
+            <h4>Mobile Phones</h4>
+            <p>Ask about stock, models and pricing.</p>
+          </article>
+          <article class="showcase-card">
+            <div class="preview">DATA</div>
+            <h4>Data Bundles</h4>
+            <p>Get timely info before you buy.</p>
+          </article>
+          <article class="showcase-card">
+            <div class="preview">DESIGN</div>
+            <h4>Graphics & Media</h4>
+            <p>Request creative support for your next promo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-panel" id="about">
+      <div class="wrap">
+        <div class="cta-box">
+          <div>
+            <h3>Ready to get started?</h3>
+            <p>Message today for products, bundles, design support, or direct service enquiries.</p>
+          </div>
+          <div class="cta-row" style="margin:0">
+            <a class="btn primary" href="https://wa.me/233550729439?text=Hello%20Kwaku%20Ebenezer%2C%20I%20want%20to%20start%20a%20service%20enquiry." target="_blank" rel="noopener">Contact now</a>
+            <a class="btn secondary" href="tel:+233550729439">Call 055 072 9439</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> Kwaku Ebenezer</span>
+      <span>Built for business, digital support, and direct customer access.</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
