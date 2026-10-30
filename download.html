@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>Download Kwaku Ebenezer App</title>
+  <style>
+    :root { --bg:#0b1220; --panel:#101b2f; --text:#edf5ff; --muted:#b4c3d7; --gold:#f4c45e; --line: rgba(255,255,255,.13); }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family: Inter, Arial, sans-serif; background: radial-gradient(circle at top, rgba(244,196,94,.15), transparent 33%), #0b1220; color: var(--text);
+      display: grid; place-items:center; min-height: 100vh; padding: 32px 16px;
+    }
+    .card {
+      width: min(740px, 100%); background: rgba(16,27,47,.95); border: 1px solid var(--line); border-radius: 24px; padding: 28px; box-shadow: 0 30px 80px rgba(0,0,0,.35);
+    }
+    .top { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:20px; }
+    .logo { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.08em; }
+    .logo-mark {
+      width: 50px; height: 50px; border-radius: 16px; background: linear-gradient(135deg, var(--gold), #d8a42b); color:#121212; display:grid; place-items:center; font-weight:900;
+    }
+    .badge { padding:8px 12px; border-radius: 999px; background: rgba(244,196,94,.12); color: var(--gold); border:1px solid rgba(244,196,94,.25); font-size: .78rem; font-weight: 700; }
+    h1 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.05em; margin: 0 0 12px; }
+    p { color: var(--muted); line-height: 1.7; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top: 22px; }
+    .btn {
+      text-decoration:none; display:inline-flex; align-items:center; justify-content:center; padding: 15px 22px; border-radius: 12px; font-weight:800; border: 1px solid var(--line);
+    }
+    .primary { background: var(--gold); color: #171717; border-color: transparent; }
+    .secondary { background: transparent; color: var(--text); }
+    .grid { display:grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 26px; }
+    .info { border: 1px solid var(--line); border-radius: 16px; padding: 16px; background: rgba(255,255,255,.02); color: var(--muted); }
+    .info strong { color: var(--text); }
+    @media (max-width: 640px){ .grid { grid-template-columns:1fr; } .top { flex-direction:column; align-items:flex-start; } }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <div class="logo"><span class="logo-mark">KE</span> KWAKU EBENEZER</div>
+      <span class="badge">Live app download</span>
+    </div>
+
+    <h1>Download the Kwaku Ebenezer App</h1>
+    <p>Get the branded app package or open the live web app from any device. This page is designed to give customers a clear, mobile-ready download option.</p>
+
+    <div class="actions">
+      <a class="btn primary" href="downloads/kwaku-ebenezer-package.zip" download>Download package</a>
+      <a class="btn secondary" href="install.html">Open install page</a>
+      <a class="btn secondary" href="index.html">View live site</a>
+    </div>
+
+    <div class="grid">
+      <div class="info"><strong>Package type:</strong><br>Static app bundle for web-based distribution.</div>
+      <div class="info"><strong>Platforms:</strong><br>Mobile and desktop browser access with installable PWA support.</div>
+      <div class="info"><strong>Quick share link:</strong><br>Use your GitHub Pages URL to send customers directly to the app.</div>
+      <div class="info"><strong>Custom domain:</strong><br>Add your own domain in GitHub Pages for a professional branded URL.</div>
+    </div>
+  </div>
+</body>
+</html>

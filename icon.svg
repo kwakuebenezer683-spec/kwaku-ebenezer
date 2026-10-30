@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kwaku Ebenezer icon">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4c45e"/>
+      <stop offset="100%" stop-color="#d99a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="#0b1220"/>
+  <rect x="40" y="40" width="432" height="432" rx="110" fill="url(#bg)"/>
+  <text x="256" y="295" text-anchor="middle" font-size="190" font-family="Arial, Helvetica, sans-serif" font-weight="800" fill="#0b1220">KE</text>
+</svg>

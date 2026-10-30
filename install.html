@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>Install Kwaku Ebenezer</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #111d30;
+      --text: #eef4ff;
+      --muted: #b7c4d9;
+      --gold: #f4c45e;
+      --line: rgba(255,255,255,.12);
+      --green: #22c55e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: Inter, Arial, sans-serif; background: linear-gradient(180deg, #0b1220 0%, #0e172b 100%);
+      color: var(--text); min-height: 100vh; display: grid; place-items: center; padding: 32px 16px;
+    }
+    .wrap { width: min(980px, 100%); }
+    .card {
+      background: rgba(17,29,48,.92); border: 1px solid var(--line); border-radius: 28px; overflow: hidden;
+      box-shadow: 0 25px 80px rgba(0,0,0,.35);
+    }
+    .top {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 24px; border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .08em; }
+    .brand-badge {
+      width: 48px; height: 48px; border-radius: 16px; background: linear-gradient(135deg, var(--gold), #d7a126); display: grid; place-items: center; color: #121212; font-weight: 900;
+    }
+    .content { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; padding: 28px 24px 32px; }
+    .phone {
+      background: linear-gradient(180deg, #111922, #171f2d); border: 1px solid var(--line); border-radius: 28px; padding: 18px; position: relative; max-width: 360px; margin: 0 auto; width: 100%;
+    }
+    .screen {
+      background: linear-gradient(180deg, #0c1424, #101a2d); border-radius: 22px; border: 1px solid var(--line); padding: 20px 18px; min-height: 430px;
+    }
+    .mini-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+    .mini-logo .icon {
+      width: 38px; height: 38px; border-radius: 12px; background: linear-gradient(135deg, var(--gold), #d9a121); display: grid; place-items: center; color: #121212; font-weight: 800;
+    }
+    .screen h1 {
+      font-size: clamp(2rem, 4vw, 2.7rem); line-height: 1.06; margin: 0 0 10px; letter-spacing: -0.06em;
+    }
+    .screen p { color: var(--muted); margin: 0 0 18px; }
+    .pill { display: inline-block; background: rgba(34,197,94,.12); color: #9ef1b8; border: 1px solid rgba(34,197,94,.3); padding: 8px 12px; border-radius: 999px; font-size: .76rem; font-weight: 700; }
+    .steps { margin-top: 18px; }
+    .steps div { display: flex; align-items: flex-start; gap: 10px; color: var(--muted); margin: 12px 0; }
+    .steps .num {
+      width: 24px; height: 24px; border-radius: 50%; background: var(--gold); color: #111111; display: grid; place-items: center; font-size: .75rem; font-weight: 900;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; text-decoration: none; padding: 14px 20px; border-radius: 12px; border: 1px solid var(--line); font-weight: 800;
+    }
+    .btn.primary { background: var(--gold); color: #121212; border-color: transparent; }
+    .btn.secondary { background: transparent; color: var(--text); }
+    .rights {
+      margin-top: 18px; color: var(--muted); font-size: .9rem; line-height: 1.6;
+    }
+    .info h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 0 0 12px; }
+    .info p { color: var(--muted); line-height: 1.7; }
+    .list { margin-top: 18px; display: grid; gap: 10px; }
+    .list-item { padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.02); color: var(--muted); }
+    .list-item strong { color: var(--text); }
+    @media (max-width: 760px) {
+      .content { grid-template-columns: 1fr; }
+      .top { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="top">
+        <div class="brand"><span class="brand-badge">KE</span> KWAKU EBENEZER</div>
+        <span class="pill">App ready for install</span>
+      </div>
+      <div class="content">
+        <div class="phone">
+          <div class="screen">
+            <div class="mini-logo"><div class="icon">KE</div><strong>Kwaku Ebenezer</strong></div>
+            <h1>Smart services.<br>Simple solutions.</h1>
+            <p>Digital services, mobile phones, data, graphics, and business support.</p>
+            <span class="pill">Download available</span>
+            <div class="steps">
+              <div><span class="num">1</span><span>Open the install page on your mobile device.</span></div>
+              <div><span class="num">2</span><span>Tap the install or download button to save the app package.</span></div>
+              <div><span class="num">3</span><span>Use the app to contact and order quickly from WhatsApp.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info">
+          <h2>Install the app</h2>
+          <p>Use this page as an Android-style install screen for your customer-facing app launch. It is designed to look like a mobile app landing page that can be shared publicly.</p>
+          <div class="actions">
+            <a class="btn primary" href="downloads/kwaku-ebenezer-package.zip" download>Download app package</a>
+            <a class="btn secondary" href="index.html">Open web app</a>
+          </div>
+          <div class="list">
+            <div class="list-item"><strong>Custom domain:</strong> connect your own domain in GitHub Pages settings.</div>
+            <div class="list-item"><strong>App icon set:</strong> use the branded SVG assets for desktop and home screen installs.</div>
+            <div class="list-item"><strong>Install flow:</strong> use this page to present a mobile-first app experience.</div>
+          </div>
+          <div class="rights">This is a web app launch page and a downloadable package placeholder for your app distribution flow.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
